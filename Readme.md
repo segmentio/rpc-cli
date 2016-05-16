@@ -49,3 +49,7 @@
   $ rpc :3000 Service.Sum [2,2]
   4
   ```
+
+## License
+
+MIT
