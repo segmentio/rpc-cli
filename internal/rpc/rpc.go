@@ -113,6 +113,10 @@ func (c *Command) interactive() error {
 			return err
 		}
 
+		if len(args) == 0 {
+			continue
+		}
+
 		method := args[0]
 		req := request(args[1:])
 		err = c.call(method, req)
