@@ -22,16 +22,16 @@
 
   ```bash
   $ rpc :3000
-  :3000> Echo.Echo foo=baz
+  :3000> Service.Echo foo=baz
   {
     foo: "baz"
   }
-  :3000> Sum.Sum [2,2]
+  :3000> Service.Sum [2,2]
   4
   ```
 
   ```bash
-  $ echo '{"name":"{{ name }}"}' | phony | rpc :3000 Echo.Echo
+  $ echo '{"name":"{{ name }}"}' | phony | rpc :3000 Service.Echo
   {
     "name": "Dyan Patterson"
   }
@@ -39,13 +39,13 @@
   ```
 
   ```bash
-  $ rpc :3000 Echo.Echo foo=baz
+  $ rpc :3000 Service.Echo foo=baz
   {
     "foo": "baz"
   }
   ```
 
   ```bash
-  $ rpc :3000 Sum.Sum [2,2]
+  $ rpc :3000 Service.Sum [2,2]
   4
   ```
