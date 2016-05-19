@@ -52,5 +52,6 @@ func main() {
 func check(err error) {
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "rpc: %s\n", err)
+		os.Exit(1)
 	}
 }
