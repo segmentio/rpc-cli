@@ -50,6 +50,11 @@ func (c *Command) Run() error {
 		return c.call(c.Method, req)
 	}
 
+	if c.Input == nil {
+		var req interface{}
+		return c.call(c.Method, req)
+	}
+
 	dec := json.NewDecoder(c.Input)
 
 	for {
