@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 	"strings"
 
@@ -31,9 +32,15 @@ func main() {
 
 	addr := args["<addr>"].(string)
 
+	var input io.Reader
+
+	if s, _ := os.Stdin.Stat(); s.Mode()&os.ModeCharDevice == 0 {
+		input = os.Stdin
+	}
+
 	cmd := rpc.New()
 	cmd.HTTP = strings.HasPrefix(addr, "http")
-	cmd.Input = os.Stdin
+	cmd.Input = input
 	cmd.Output = os.Stdout
 	cmd.Addr = addr
 	cmd.Method, _ = args["<method>"].(string)
