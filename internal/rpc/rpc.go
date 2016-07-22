@@ -185,11 +185,17 @@ func (c *Command) post(method string, req interface{}) error {
 
 	res := struct {
 		Result interface{} `json:"result"`
+		Error  interface{} `json:"error"`
 	}{}
 
 	err = json.NewDecoder(resp.Body).Decode(&res)
 	if err != nil {
 		return err
+	}
+
+	if res.Error != nil {
+		fmt.Printf("%+v\n", res.Error)
+		return nil
 	}
 
 	buf, err := json.MarshalIndent(res.Result, "", "  ")
