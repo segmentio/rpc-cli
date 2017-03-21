@@ -55,6 +55,7 @@ func (c *Command) Run() error {
 	}
 
 	dec := json.NewDecoder(c.Input)
+	dec.UseNumber()
 
 	for {
 		var req interface{}
@@ -188,7 +189,9 @@ func (c *Command) post(method string, req interface{}) error {
 		Error  interface{} `json:"error"`
 	}{}
 
-	err = json.NewDecoder(resp.Body).Decode(&res)
+	dec := json.NewDecoder(resp.Body)
+	dec.UseNumber()
+	err = dec.Decode(&res)
 	if err != nil {
 		return err
 	}
