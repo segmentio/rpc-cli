@@ -1,0 +1,29 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"path": "=M",
+			"revision": ""
+		},
+		{
+			"checksumSHA1": "klc389oLgijC+Nv0mGGJ9hZoblg=",
+			"path": "github.com/mattn/go-shellwords",
+			"revision": "95c860c1895b21b58903abdd1d9c591560b0601c",
+			"revisionTime": "2017-08-28T04:11:23Z"
+		},
+		{
+			"checksumSHA1": "LfLTyk4ox5wH0YL4sD5rcbrVWBw=",
+			"path": "github.com/tj/docopt",
+			"revision": "c8470e45692f168e8b380c5d625327e756d7d0a9",
+			"revisionTime": "2014-08-07T22:00:17Z"
+		},
+		{
+			"checksumSHA1": "VAPpB3iZ9bfjWqNDoX7qXqfRcQU=",
+			"path": "gopkg.in/readline.v1",
+			"revision": "62c6fe6193755f722b8b8788aa7357be55a50ff1",
+			"revisionTime": "2016-07-26T13:51:17Z"
+		}
+	],
+	"rootPath": "github.com/segmentio/rpc-cli"
+}
