@@ -9,7 +9,7 @@ VERSION := $(patsubst v%,%,$(GIT_DESCRIBE)$(GIT_DIRTY))
 
 LDFLAGS := "-X main.Version=$(VERSION)"
 
-DEBFILE := segment-rpc_$(VERSION)_amd64.deb
+DEBFILE := segment-rpc-legacy_$(VERSION)_amd64.deb
 
 bin/rpc: dep
 	mkdir -p bin
@@ -20,8 +20,14 @@ bin/rpc-linux-amd64: dep
 	env GOOS=linux GOARCH=amd64 go build -o bin/rpc-linux-amd64 ./cmd/rpc
 
 $(DEBFILE): bin/rpc-linux-amd64
-	fpm -s dir  -t deb -n segment-rpc -v $(VERSION) -m sre-team@segment.com --vendor "Segment.io, Inc." \
-		./bin/rpc-linux-amd64=/usr/bin/rpc
+	fpm \
+		-s dir \
+		-t deb \
+		-n segment-rpc-legacy \
+		-v $(VERSION) \
+		-m sre-team@segment.com \
+		--vendor "Segment.io, Inc." \
+		./bin/rpc-linux-amd64=/usr/bin/rpc-legacy
 
 deb: $(DEBFILE)
 

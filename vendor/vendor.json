@@ -7,10 +7,10 @@
 			"revision": ""
 		},
 		{
-			"checksumSHA1": "klc389oLgijC+Nv0mGGJ9hZoblg=",
+			"checksumSHA1": "jWJJlpvg/cqbClaKqZoAnNP6HFc=",
 			"path": "github.com/mattn/go-shellwords",
-			"revision": "95c860c1895b21b58903abdd1d9c591560b0601c",
-			"revisionTime": "2017-08-28T04:11:23Z"
+			"revision": "f8471b0a71ded0ab910825ee2cf230f25de000f1",
+			"revisionTime": "2018-06-05T04:17:37Z"
 		},
 		{
 			"checksumSHA1": "LfLTyk4ox5wH0YL4sD5rcbrVWBw=",
