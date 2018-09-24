@@ -10,7 +10,8 @@ import (
 	"github.com/tj/docopt"
 )
 
-const version = ""
+var version string
+
 const usage = `
   Usage:
     rpc <addr> <method> <args>...

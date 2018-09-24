@@ -7,7 +7,7 @@ GIT_DESCRIBE := $(shell git describe --tags --always)
 
 VERSION := $(patsubst v%,%,$(GIT_DESCRIBE)$(GIT_DIRTY))
 
-LDFLAGS := "-X main.Version=$(VERSION)"
+LDFLAGS := "-X main.version=$(VERSION)"
 
 DEBFILE := segment-rpc-legacy_$(VERSION)_amd64.deb
 
