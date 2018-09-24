@@ -1,4 +1,9 @@
 
+v1.0.3 / 2018-09-24
+===================
+
+  * fix(bin): add closing parenthesis to user-agent
+
 v1.0.2 / 2018-09-24
 ===================
 
