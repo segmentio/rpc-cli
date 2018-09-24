@@ -1,4 +1,9 @@
 
+v1.0.1 / 2018-09-24
+===================
+
+  * fix(build): add ldflags to set version in binary
+
 v1.0.0 / 2018-09-24
 ===================
 
