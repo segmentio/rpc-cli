@@ -20,6 +20,7 @@ type Command struct {
 	Addr        string
 	Method      string
 	Args        []string
+	UserAgent   string
 	HTTP        bool
 	Interactive bool
 	Input       io.Reader
@@ -170,6 +171,10 @@ func (c *Command) post(method string, req interface{}) error {
 	}
 
 	r.Header.Set("Content-Type", "application/json")
+	if c.UserAgent != "" {
+		r.Header.Set("User-Agent", c.UserAgent)
+	}
+
 	resp, err := http.DefaultClient.Do(r)
 	if resp != nil {
 		defer resp.Body.Close()
