@@ -45,7 +45,7 @@ func main() {
 	cmd.Addr = addr
 	cmd.Method, _ = args["<method>"].(string)
 	cmd.Args, _ = args["<args>"].([]string)
-	cmd.UserAgent = fmt.Sprintf("Segment (rpc-cli/%s", version)
+	cmd.UserAgent = fmt.Sprintf("Segment (rpc-cli-legacy/%s", version)
 
 	check(cmd.Run())
 }
