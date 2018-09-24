@@ -17,7 +17,7 @@ bin/rpc: dep
 
 bin/rpc-linux-amd64: dep
 	mkdir -p bin
-	env GOOS=linux GOARCH=amd64 go build -o bin/rpc-linux-amd64 ./cmd/rpc
+	env GOOS=linux GOARCH=amd64 go build -ldflags $(LDFLAGS) -o bin/rpc-linux-amd64 ./cmd/rpc
 
 $(DEBFILE): bin/rpc-linux-amd64
 	fpm \
