@@ -11,7 +11,7 @@
 ## Installation
 
   ```go
-  $ go get github.com/segmentio/rpc-cli/cmd/rpc
+  $ go install github.com/segmentio/rpc-cli/cmd/rpc@latest
   ```
 
 ## Codecs
